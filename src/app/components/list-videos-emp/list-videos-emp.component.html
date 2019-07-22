@@ -1,0 +1,6 @@
+<button mat-button [matMenuTriggerFor]="menu">List Videos</button>
+<mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let link of currentUser?.links">{{link.title}}</button>
+      </mat-menu>
+
+  

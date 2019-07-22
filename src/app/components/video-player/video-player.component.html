@@ -1,0 +1,24 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title >Videos</mat-card-title>
+    </mat-card-header>
+    <!-- Variable for source depending on youtube or Vimeo -->
+    <mat-card-content>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ru0K8uYEZWw"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+             allowfullscreen></iframe>
+    </mat-card-content>
+    <mat-card-actions>
+    <!--Load one based on type of user-->
+     <app-list-videos-emp></app-list-videos-emp>
+     <!-- <app-list-videos-can></app-list-videos-can> -->
+      <!--Load one based on type of user-->
+    </mat-card-actions>
+  </mat-card>
+
+  <app-add-link></app-add-link>
+
+
+
+ 
