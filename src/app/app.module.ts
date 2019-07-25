@@ -18,6 +18,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -46,8 +47,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatFormFieldModule,
     MatTableModule,
+    MatDialogModule
   ],
+  entryComponents: [ AddLinkComponent],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

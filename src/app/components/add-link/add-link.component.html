@@ -10,7 +10,7 @@
     <input type="text" formControlName="oEmbed" pattern>
   </label>
 
-  <button type="submit" [disabled]="!addLinkForm.valid">Submit</button>
+  <button mat-button type="submit" (click)="onSubmit();" [disabled]="!addLinkForm.valid" [mat-dialog-close]="addLinkForm">Submit</button>
 
   <p>
     <button (click)="updateLink()">Update Link</button>
@@ -21,4 +21,3 @@
   </p>
 
 </form>
-

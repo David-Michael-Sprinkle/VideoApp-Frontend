@@ -59,7 +59,6 @@ export class AddLinkComponent implements OnInit {
     console.warn(JSON.stringify(this.addLinkForm.value));
     this.userService.addLink(this.userid, this.addLinkForm.value)
     .subscribe(loadUser => this.currentUser = loadUser);
-
     // TODO: output updated form data to service
   }
 
@@ -91,6 +90,6 @@ export class AddLinkComponent implements OnInit {
   this.newLink = 'https://player.vimeo.com/video/' + this.videoCode;
   // end form for viemo: https://player.vimeo.com/video/342770360
   return this.newLink;
-}
+    }
 
 }

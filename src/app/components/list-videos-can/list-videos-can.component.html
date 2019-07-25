@@ -1,17 +1,10 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      
-        <!-- title Column -->
-        <ng-container matColumnDef="title">
-          <th mat-header-cell *matHeaderCellDef> Video Title </th>
-          <td mat-cell *matCellDef="let user">{{user.links.title}}</td>
-        </ng-container>
-      
-        <!-- delete button Column -->
-        <ng-container matColumnDef="delete">
-          <th mat-header-cell *matHeaderCellDef></th>
-          <td mat-cell *matCellDef="let user"> <button>Delete</button> </td>
-        </ng-container>
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
+<button mat-button [matMenuTriggerFor]="menu">Manage Videos</button>
+<mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let link of currentUser?.links" [matMenuTriggerFor]="delete" [matMenuTriggerData]="{video: link}">{{link.title}}</button>
+        <button mat-menu-item (click)="openDialog();">Add Video</button>
+</mat-menu>
+<mat-menu #delete="matMenu">
+  <ng-template matMenuContent let-video="video">
+    <button mat-menu-item (click)="deleteLink(video.linkid);">Remove {{video.title}}</button>
+  </ng-template>
+</mat-menu>

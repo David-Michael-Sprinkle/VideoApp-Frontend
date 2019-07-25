@@ -32,7 +32,8 @@ addLink( userid, link ): Observable<User> {
   return this.http.post<User>(this.userUrl + '/' + userid + '/addlink', JSON.stringify(link), this.httpOptions);
 }
 
-deleteLink(linkid): Observable<User> {
-  return this.http.put<User>(this.userUrl + '/${userid}/deletelink/${linkid}', '', this.httpOptions );
+deleteLink(userid, linkid): Observable<User> {
+  console.log(this.userUrl + '/' + userid + '/deletelink/' + linkid);
+  return this.http.put<User>(this.userUrl + '/' + userid + '/deletelink/' + linkid, this.httpOptions );
 }
 }
